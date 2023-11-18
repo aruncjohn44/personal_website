@@ -142,6 +142,7 @@ a {
   text-align: center;
   width: 70%;
   margin-bottom: 5%;
+  text-align: justify;
 }
 
 .content-writing {
@@ -150,8 +151,11 @@ a {
 
 .content-writing-text {
   margin: auto;
-  width: 70%;
+  width: 80%;
   padding: 0 5%;
+}
+.content-text-desc {
+  text-align: justify;
 }
 
 .articles-content-writing {
@@ -193,6 +197,10 @@ a:hover {
   margin-block-start: 3em;
   text-align: left;
   margin: 15px 40px;
+}
+
+.intro {
+  text-align: justify;
 }
 
 .profile_img {
