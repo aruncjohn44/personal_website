@@ -38,6 +38,11 @@
   /* position: fixed; */
 }
 
+.AI-text {
+  font-size: 4rem;
+  color: #224b0c;
+}
+
 .skills-text {
   margin-bottom: 50px;
 }
