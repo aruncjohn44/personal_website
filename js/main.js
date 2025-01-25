@@ -43,15 +43,16 @@ window.addEventListener('scroll', () => {
 
 function createParticles() {
   const title = document.querySelector('.Title');
-  for (let i = 0; i < 75; i++) {
+  // Reduce number of particles from 75 to 30
+  for (let i = 0; i < 30; i++) {
     const particle = document.createElement('div');
     particle.className = 'particle';
     particle.style.cssText = `
       position: absolute;
-      width: ${Math.random() * 20 + 5}px;
-      height: ${Math.random() * 20 + 5}px;
-      background: rgba(104, 244, 165, ${Math.random() * 0.5 + 0.2});
-      box-shadow: 0 0 ${Math.random() * 10 + 5}px rgba(104, 244, 165, 0.8);
+      width: ${Math.random() * 15 + 5}px; // Reduced max size
+      height: ${Math.random() * 15 + 5}px; // Reduced max size
+      background: rgba(104, 244, 165, ${Math.random() * 0.3 + 0.1}); // Reduced opacity
+      box-shadow: 0 0 ${Math.random() * 5 + 3}px rgba(104, 244, 165, 0.6); // Reduced glow
       border-radius: 50%;
       left: ${Math.random() * 100}%;
       top: ${Math.random() * 100}%;
@@ -67,20 +68,19 @@ function animateParticle(particle) {
   const animation = particle.animate([
     { 
       transform: 'translate(0, 0) scale(1)',
-      opacity: Math.random() * 0.5 + 0.5
+      opacity: Math.random() * 0.3 + 0.3 // Reduced opacity range
     },
     { 
-      transform: `translate(${Math.random() * 300 - 150}px, ${Math.random() * 300 - 150}px) scale(${Math.random() * 0.5 + 0.5})`,
-      opacity: Math.random() * 0.3 + 0.2
+      transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) scale(${Math.random() * 0.3 + 0.5})`, // Reduced movement range
+      opacity: Math.random() * 0.2 + 0.1
     }
   ], {
-    duration: 5000 + Math.random() * 5000,
+    duration: 4000 + Math.random() * 3000, // Reduced animation duration
     direction: 'alternate',
     iterations: Infinity,
     easing: 'ease-in-out'
   });
-}
-function typeWriterEffect() {
+}function typeWriterEffect() {
   const text = " AI ";
   const element = document.querySelector('.AI-text');
   let index = 0;

@@ -140,8 +140,26 @@ h1 {
 
 .mountain {
   width: 30%;
-  /* position: fixed; */
+  min-width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .mountain {
+    width: 80%;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mountain {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
 
 .AI-text {
   font-size: 4rem;
