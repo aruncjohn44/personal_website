@@ -452,7 +452,7 @@ a:hover {
   filter: grayscale(50%);
 }
 
-.org-img1:hover, .org-img2:hover, .org-img3:hover, .org-img4:hover {
+.org-img1:hover, .org-img2:hover, .org-img3:hover, .org-img4:hover, .org-img5:hover {
   filter: grayscale(0%);
   transform: scale(1.15);
 }
