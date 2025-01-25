@@ -42,25 +42,25 @@ h1 {
   0%, 100% { text-shadow: 0 0 5px rgba(150, 249, 117, 0.877); }
   50% { text-shadow: 0 0 20px rgba(120, 249, 50, 0.8); }
 }
-  .cloud1 {
-    position: absolute;
-    width: 250px;
-    right: 15%;
-    top: 50px;
-    animation: float 6s ease-in-out infinite;
-  }
+.cloud1 {
+  position: absolute;
+  width: 400px; /* Increased from 250px */
+  right: 10%;
+  top: 50px;
+  animation: float 8s ease-in-out infinite; /* Increased duration from 6s to 8s */
+}
 
-  .cloud2 {
-    position: absolute;
-    width: 250px;
-    left: 15%;
-    top: 40%;
-    animation: float 8s ease-in-out infinite;
-  }
+.cloud2 {
+  position: absolute;
+  width: 400px; /* Increased from 250px */
+  left: 10%;
+  top: 40%;
+  animation: float 10s ease-in-out infinite; /* Increased duration from 8s to 10s */
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-40px); } /* Increased float distance from -20px to -40px */
 }
 
 @keyframes rise {
@@ -122,19 +122,6 @@ h1 {
   padding: 30px 0 20px;
 }
 
-.cloud1 {
-  position: relative;
-  width: 150px;
-  left: 200px;
-  top: 10px;
-}
-.cloud2 {
-  position: absolute;
-  width: 150px;
-  left: 50px;
-
-  /* bottom: 100px; */
-}
 .mountain {
   width: 30%;
   /* position: fixed; */
