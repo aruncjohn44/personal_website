@@ -290,6 +290,35 @@ a {
   padding: 20px;
 }
 
+
+/* Add media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  .articles-content-writing {
+    width: 100%;
+    padding: 5% 2%;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%; /* Increased touch target size */
+    opacity: 0.7; /* Always visible on mobile */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 15px; /* Smaller padding on mobile */
+  }
+  
+  .carousel-indicators {
+    bottom: 0;
+  }
+  
+  .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+  }
+}
+
 .carousel-image:hover {
   transform: scale(1.02);
 }
