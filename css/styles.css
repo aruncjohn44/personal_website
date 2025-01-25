@@ -382,21 +382,34 @@ a:hover {
 .org-img1 {
   height: 125px;
   margin: auto;
+  transition: all 0.3s ease;
+  filter: grayscale(50%);
 }
 .org-img2 {
   height: 125px;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
+  filter: grayscale(50%);
 }
 .org-img3 {
   height: 80px;
   margin: auto;
   margin-top: 30px;
+  transition: all 0.3s ease;
+  filter: grayscale(50%);
 }
 .org-img4 {
   height: 60px;
   margin: auto;
   margin: 20px 30px;
+  transition: all 0.3s ease;
+  filter: grayscale(50%);
 }
+.org-img1:hover, .org-img2:hover, .org-img3:hover, .org-img4:hover {
+  filter: grayscale(0%);
+  transform: scale(1.15);
+}
+
 
 .tool-text {
   margin-bottom: 50px;
