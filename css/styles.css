@@ -1,5 +1,7 @@
 .Title {
-  background: linear-gradient(135deg, #e1ffee 0%, #d4f5ff 100%);
+  background: linear-gradient(135deg, #68f4a5 0%, #d4f5ff 50%, #A7B49E 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
   padding: 50px 20px;
   min-height: 80vh;
   display: flex;
@@ -8,6 +10,37 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+h1 {
+  animation: fadeInDown 1.5s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AI-text {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 5px rgba(150, 249, 117, 0.877); }
+  50% { text-shadow: 0 0 20px rgba(120, 249, 50, 0.8); }
 }
   .cloud1 {
     position: absolute;
@@ -33,6 +66,43 @@
 @keyframes rise {
   from { transform: translateY(100px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+.mountain {
+  transition: transform 0.5s ease;
+}
+
+.mountain:hover {
+  transform: scale(1.05);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  animation: bounce 2s infinite;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  margin-bottom: 20px;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #224b0c;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.mouse::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #224b0c;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: scroll 1.5s infinite;
 }
 
 .Middle {
