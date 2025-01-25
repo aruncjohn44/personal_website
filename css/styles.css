@@ -289,9 +289,9 @@ a {
 }
 
 .articles-content-writing {
-  padding: 5% 15%;
+  padding: 5% 5%;
   margin: auto;
-  width: 70%;
+  width: 60%;
 }
 
 .carousel-inner-text {
@@ -299,7 +299,8 @@ a {
 }
 
 .carousel-image {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: 350px;
   transition: transform 0.3s ease;
   object-fit: contain; 
@@ -433,8 +434,10 @@ a:hover {
   font-size: 0.75rem;
 }
 
+
 .Orgs {
-  background-color: #fcf8e8;
+  background: linear-gradient(180deg, #fcf8e8 0%, #f9f5e5 100%);
+  margin: 0;
 }
 
 .Orgs-text {
