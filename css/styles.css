@@ -233,14 +233,14 @@ h2 {
   font-family: arial, verdana;
   font-size: 2rem;
   margin-top: 10px;
-  color: #3fa796;
+  color: #185c51;
   font-weight: bold;
   padding-bottom: 10px;
   padding-top: 30px;
 }
 
 h3 {
-  color: #3fa796;
+  color: #2b796c;
   font-family: arial, verdana;
   font-weight: bold;
 }
@@ -594,4 +594,21 @@ a:hover {
 .fade-in-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.carousel-caption {
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  color: #000;
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
