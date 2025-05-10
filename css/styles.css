@@ -612,3 +612,50 @@ a:hover {
   font-size: 1.1rem;
   font-weight: bold;
 }
+
+.skills-progress {
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+  padding: 50px 20px;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container {
+  margin-top: 30px;
+}
+
+.skill-item {
+  margin-bottom: 25px;
+}
+
+.skill-progress-container {
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3fa796 0%, #59e6eb 100%);
+  border-radius: 10px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+
+.skill-name {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #185c51;
+  font-size: 1.1rem;
+}
+

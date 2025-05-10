@@ -112,8 +112,27 @@ function addParallaxEffect() {
   });
 }
 
+function initSkillProgressBars() {
+  const skillBars = document.querySelectorAll('.skill-progress-bar');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const percent = entry.target.getAttribute('data-percent');
+        entry.target.style.width = percent;
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  skillBars.forEach(bar => {
+    observer.observe(bar);
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     createParticles();
     typeWriterEffect();
     addParallaxEffect();
+    initSkillProgressBars();
 });
