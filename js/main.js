@@ -136,3 +136,48 @@ document.addEventListener('DOMContentLoaded', () => {
     addParallaxEffect();
     initSkillProgressBars();
 });
+
+
+// Chatbot Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const chatButton = document.getElementById('chatButton');
+    const chatModal = document.getElementById('chatbotModal');
+    const closeBtn = document.querySelector('.chatbot-close');
+
+    // Open modal
+    if (chatButton) {
+        chatButton.addEventListener('click', function() {
+            chatModal.style.display = 'block';
+            chatModal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    }
+
+    // Close modal
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            closeModal();
+        });
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(event) {
+        if (event.target === chatModal) {
+            closeModal();
+        }
+    });
+
+    // Close modal function
+    function closeModal() {
+        chatModal.style.display = 'none';
+        chatModal.classList.remove('show');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && chatModal.style.display === 'block') {
+            closeModal();
+        }
+    });
+});
