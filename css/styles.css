@@ -812,7 +812,7 @@ a:hover {
 
 .chatbot-modal-header {
   background: linear-gradient(135deg, #11999E, #30E3CA);
-  color: white;
+  color: black;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -822,6 +822,7 @@ a:hover {
 .chatbot-modal-header h3 {
   margin: 0;
   font-size: 1.3rem;
+  color: white;
 }
 
 .chatbot-close {
