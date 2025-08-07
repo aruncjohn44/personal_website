@@ -452,6 +452,12 @@ a:hover {
   filter: grayscale(50%);
 }
 
+.org-img1 {
+  height: 80px; /* 60px * 1.2 = 72px */
+  margin-left: 0px; /* No left margin */
+}
+
+
 .org-img1:hover, .org-img2:hover, .org-img3:hover, .org-img4:hover, .org-img5:hover {
   filter: grayscale(0%);
   transform: scale(1.15);
@@ -464,6 +470,7 @@ a:hover {
   flex-wrap: nowrap;
   gap: 20px;
   padding: 0 0%;
+  margin-left: -75px;
 }
 
 @media screen and (max-width: 992px) {
