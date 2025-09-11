@@ -189,66 +189,204 @@ document.addEventListener('DOMContentLoaded', function() {
 // Quiz functionality
 class AIQuiz {
     constructor() {
-        this.questions = [
-            // Placeholder questions - you can replace these later
-            {
-                question: "What does AI stand for?",
-                options: ["Artificial Intelligence", "Automated Intelligence", "Advanced Intelligence", "Applied Intelligence"],
-                correct: 0
-            },
-            {
-                question: "Which of the following is a type of machine learning?",
-                options: ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "All of the above"],
-                correct: 3
-            },
-            {
-                question: "What is a neural network?",
-                options: ["A computer network", "A biological network", "A computational model inspired by biological neural networks", "A social network"],
-                correct: 2
-            },
-            {
-                question: "What is the purpose of training data in machine learning?",
-                options: ["To test the model", "To teach the model patterns", "To validate the model", "To deploy the model"],
-                correct: 1
-            },
-            {
-                question: "Which algorithm is commonly used for classification tasks?",
-                options: ["Linear Regression", "Decision Trees", "K-means", "PCA"],
-                correct: 1
-            },
-            {
-                question: "What is overfitting in machine learning?",
-                options: ["Model performs well on training data but poorly on new data", "Model performs poorly on all data", "Model is too simple", "Model trains too fast"],
-                correct: 0
-            },
-            {
-                question: "What does NLP stand for?",
-                options: ["Natural Language Processing", "Neural Language Programming", "Network Language Protocol", "New Learning Process"],
-                correct: 0
-            },
-            {
-                question: "Which of these is a popular deep learning framework?",
-                options: ["TensorFlow", "PyTorch", "Keras", "All of the above"],
-                correct: 3
-            },
-            {
-                question: "What is the main goal of reinforcement learning?",
-                options: ["Classification", "Regression", "Learning through rewards and penalties", "Clustering"],
-                correct: 2
-            },
-            {
-                question: "What is a common activation function in neural networks?",
-                options: ["ReLU", "Sigmoid", "Tanh", "All of the above"],
-                correct: 3
-            }
-        ];
+        this.questionSets = {
+            set1: [
+                {
+                    question: "What does AI stand for?",
+                    options: ["Artificial Intelligence", "Automated Intelligence", "Advanced Intelligence", "Applied Intelligence"],
+                    correct: 0
+                },
+                {
+                    question: "Which of the following is a type of machine learning?",
+                    options: ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "All of the above"],
+                    correct: 3
+                },
+                {
+                    question: "What is a neural network?",
+                    options: ["A computer network", "A biological network", "A computational model inspired by biological neural networks", "A social network"],
+                    correct: 2
+                },
+                {
+                    question: "What is the purpose of training data in machine learning?",
+                    options: ["To test the model", "To teach the model patterns", "To validate the model", "To deploy the model"],
+                    correct: 1
+                },
+                {
+                    question: "Which algorithm is commonly used for classification tasks?",
+                    options: ["Linear Regression", "Decision Trees", "K-means", "PCA"],
+                    correct: 1
+                },
+                {
+                    question: "What is overfitting in machine learning?",
+                    options: ["Model performs well on training data but poorly on new data", "Model performs poorly on all data", "Model is too simple", "Model trains too fast"],
+                    correct: 0
+                },
+                {
+                    question: "What does NLP stand for?",
+                    options: ["Natural Language Processing", "Neural Language Programming", "Network Language Protocol", "New Learning Process"],
+                    correct: 0
+                },
+                {
+                    question: "Which of these is a popular deep learning framework?",
+                    options: ["TensorFlow", "PyTorch", "Keras", "All of the above"],
+                    correct: 3
+                },
+                {
+                    question: "What is the main goal of reinforcement learning?",
+                    options: ["Classification", "Regression", "Learning through rewards and penalties", "Clustering"],
+                    correct: 2
+                },
+                {
+                    question: "What is a common activation function in neural networks?",
+                    options: ["ReLU", "Sigmoid", "Tanh", "All of the above"],
+                    correct: 3
+                }
+            ],
+            set2: [
+                {
+                    question: "What is the difference between AI and Machine Learning?",
+                    options: ["They are the same thing", "AI is broader, ML is a subset of AI", "ML is broader, AI is a subset of ML", "They are completely unrelated"],
+                    correct: 1
+                },
+                {
+                    question: "What is a convolutional neural network (CNN) primarily used for?",
+                    options: ["Text processing", "Image recognition", "Time series analysis", "Audio processing"],
+                    correct: 1
+                },
+                {
+                    question: "What does GPU stand for in the context of AI training?",
+                    options: ["General Processing Unit", "Graphics Processing Unit", "Generative Processing Unit", "Global Processing Unit"],
+                    correct: 1
+                },
+                {
+                    question: "What is the purpose of a loss function in machine learning?",
+                    options: ["To increase model complexity", "To measure prediction errors", "To add more features", "To reduce training time"],
+                    correct: 1
+                },
+                {
+                    question: "What is transfer learning?",
+                    options: ["Moving data between computers", "Using pre-trained models for new tasks", "Converting between file formats", "Transferring knowledge between humans"],
+                    correct: 1
+                },
+                {
+                    question: "What is the vanishing gradient problem?",
+                    options: ["When gradients become too large", "When gradients become too small during backpropagation", "When the model stops learning", "When data disappears"],
+                    correct: 1
+                },
+                {
+                    question: "What is ensemble learning?",
+                    options: ["Training one very large model", "Combining multiple models for better performance", "Learning from musical data", "Training models in sequence"],
+                    correct: 1
+                },
+                {
+                    question: "What is the purpose of regularization in machine learning?",
+                    options: ["To speed up training", "To prevent overfitting", "To increase model complexity", "To reduce data size"],
+                    correct: 1
+                },
+                {
+                    question: "What is a transformer in deep learning?",
+                    options: ["A type of robot", "An attention-based neural network architecture", "A data preprocessing tool", "A hardware component"],
+                    correct: 1
+                },
+                {
+                    question: "What is the main advantage of using attention mechanisms?",
+                    options: ["Faster training", "Better handling of long sequences", "Smaller model size", "Less data required"],
+                    correct: 1
+                }
+            ],
+            set3: [
+                {
+                    question: "What is MLOps?",
+                    options: ["Machine Learning Operations", "Multi-Level Operations", "Model Learning Optimization", "Machine Logic Operations"],
+                    correct: 0
+                },
+                {
+                    question: "What is the purpose of cross-validation?",
+                    options: ["To increase training speed", "To assess model performance and generalization", "To reduce model size", "To clean data"],
+                    correct: 1
+                },
+                {
+                    question: "What is a GAN?",
+                    options: ["General Artificial Network", "Generative Adversarial Network", "Global Analysis Network", "Gradient Activation Network"],
+                    correct: 1
+                },
+                {
+                    question: "What is the curse of dimensionality?",
+                    options: ["Too many features making analysis difficult", "Not enough data", "Models becoming too complex", "Hardware limitations"],
+                    correct: 0
+                },
+                {
+                    question: "What is feature engineering?",
+                    options: ["Building hardware features", "Creating or selecting relevant input variables", "Engineering software features", "Designing user interfaces"],
+                    correct: 1
+                },
+                {
+                    question: "What is the difference between bagging and boosting?",
+                    options: ["No difference", "Bagging trains models in parallel, boosting in sequence", "Bagging is faster", "Boosting uses more data"],
+                    correct: 1
+                },
+                {
+                    question: "What is a hyperparameter?",
+                    options: ["A very important parameter", "A parameter set before training", "A parameter learned during training", "A parameter used for testing"],
+                    correct: 1
+                },
+                {
+                    question: "What is the purpose of batch normalization?",
+                    options: ["To reduce batch size", "To normalize input data", "To stabilize and accelerate training", "To increase model accuracy"],
+                    correct: 2
+                },
+                {
+                    question: "What is federated learning?",
+                    options: ["Learning from government data", "Training models across decentralized data", "Learning in groups", "Federal regulation of AI"],
+                    correct: 1
+                },
+                {
+                    question: "What is the difference between precision and recall?",
+                    options: ["They are the same", "Precision is about true positives vs predicted positives, recall is about true positives vs actual positives", "Precision is more important", "Recall is more accurate"],
+                    correct: 1
+                }
+            ]
+        };
         
+        this.questions = [];
+        this.currentQuestionSet = '';
         this.currentQuestion = 0;
         this.score = 0;
         this.userAnswers = [];
         this.quizStarted = false;
         
         this.initializeQuiz();
+        this.loadQuestionsFromJSON(); // Try to load from JSON first
+    }
+
+    // Method to load questions from JSON file
+    async loadQuestionsFromJSON() {
+        try {
+            const response = await fetch('data/quiz-questions.json');
+            if (response.ok) {
+                const jsonData = await response.json();
+                this.questionSets = { ...this.questionSets, ...jsonData };
+                console.log('Questions loaded from JSON file successfully');
+            }
+        } catch (error) {
+            console.log('No JSON file found or error loading, using default questions:', error.message);
+        }
+    }
+
+    // Method to randomly select a question set
+    selectRandomQuestionSet() {
+        const setKeys = Object.keys(this.questionSets);
+        const randomIndex = Math.floor(Math.random() * setKeys.length);
+        this.currentQuestionSet = setKeys[randomIndex];
+        this.questions = [...this.questionSets[this.currentQuestionSet]];
+        
+        console.log(`Selected question set: ${this.currentQuestionSet}`);
+        
+        // Update welcome message to show which set is selected
+        const welcomeMessage = document.getElementById('quizWelcomeMessage');
+        if (welcomeMessage) {
+            welcomeMessage.textContent = `Ready to test your AI knowledge? You'll be answering questions from ${this.currentQuestionSet.toUpperCase()}. Good luck! 🚀`;
+        }
     }
     
     initializeQuiz() {
@@ -264,6 +402,7 @@ class AIQuiz {
         // Open modal
         if (quizButton) {
             quizButton.addEventListener('click', () => {
+                this.selectRandomQuestionSet(); // Select random set when opening quiz
                 quizModal.style.display = 'block';
                 quizModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
@@ -311,6 +450,7 @@ class AIQuiz {
                 this.restartQuiz();
             });
         }
+        
         // Share score
         if (shareBtn) {
             shareBtn.addEventListener('click', () => {
@@ -453,15 +593,15 @@ class AIQuiz {
         const percentage = (this.score / this.questions.length) * 100;
 
         if (percentage >= 90) {
-            message = 'Outstanding! You\'re an AI expert! 🎉';
+            message = `Outstanding! You aced ${this.currentQuestionSet.toUpperCase()}! 🎉`;
         } else if (percentage >= 80) {
-            message = 'Excellent work! You have strong AI knowledge! 👏';
+            message = `Excellent work on ${this.currentQuestionSet.toUpperCase()}! 👏`;
         } else if (percentage >= 70) {
-            message = 'Good job! You\'re on the right track! 👍';
+            message = `Good job on ${this.currentQuestionSet.toUpperCase()}! 👍`;
         } else if (percentage >= 60) {
-            message = 'Not bad! Keep learning and improving! 📚';
+            message = `Not bad on ${this.currentQuestionSet.toUpperCase()}! Keep learning! 📚`;
         } else {
-            message = 'Keep studying! There\'s always room to grow! 💪';
+            message = `Keep studying ${this.currentQuestionSet.toUpperCase()}! There's always room to grow! 💪`;
         }
 
         scoreMessage.textContent = message;

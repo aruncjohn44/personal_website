@@ -1,0 +1,56 @@
+{
+  "set4": [
+    {
+      "question": "What is Computer Vision?",
+      "options": ["A way for computers to see", "A field of AI that trains computers to interpret visual information", "Computer graphics", "Virtual reality"],
+      "correct": 1
+    },
+    {
+      "question": "What is the main purpose of data preprocessing?",
+      "options": ["To make data look pretty", "To reduce file size", "To clean and prepare data for analysis", "To encrypt data"],
+      "correct": 2
+    },
+    {
+      "question": "What does API stand for in software development?",
+      "options": ["Advanced Programming Interface", "Application Programming Interface", "Automated Program Integration", "Applied Programming Instructions"],
+      "correct": 1
+    },
+    {
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "options": ["Supervised uses labeled data, unsupervised doesn't", "Supervised is faster", "Unsupervised is more accurate", "No difference"],
+      "correct": 0
+    },
+    {
+      "question": "What is a common use case for clustering algorithms?",
+      "options": ["Predicting house prices", "Grouping similar customers", "Image classification", "Text translation"],
+      "correct": 1
+    }
+  ],
+  "set5": [
+    {
+      "question": "What is the primary goal of Explainable AI (XAI)?",
+      "options": ["To make AI faster", "To make AI decisions interpretable and transparent", "To reduce AI costs", "To make AI smaller"],
+      "correct": 1
+    },
+    {
+      "question": "What is edge computing in the context of AI?",
+      "options": ["Computing at the edge of networks", "Processing data closer to where it's generated", "A new type of processor", "Cloud computing"],
+      "correct": 1
+    },
+    {
+      "question": "What is the purpose of A/B testing in machine learning?",
+      "options": ["To test two different models", "To compare performance of different approaches", "To debug code", "To train models faster"],
+      "correct": 1
+    },
+    {
+      "question": "What is synthetic data?",
+      "options": ["Fake data", "Artificially generated data that mimics real data", "Compressed data", "Encrypted data"],
+      "correct": 1
+    },
+    {
+      "question": "What is the main challenge with bias in AI?",
+      "options": ["It makes models slower", "It can lead to unfair or discriminatory outcomes", "It increases costs", "It reduces accuracy"],
+      "correct": 1
+    }
+  ]
+}
