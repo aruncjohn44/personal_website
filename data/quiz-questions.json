@@ -2,35 +2,60 @@
   "set4": [
     {
       "question": "What is Computer Vision?",
-      "options": ["A way for computers to see", "A field of AI that trains computers to interpret visual information", "Computer graphics", "Virtual reality"],
-      "correct": 1
-    },
-    {
-      "question": "What is the main purpose of data preprocessing?",
-      "options": ["To make data look pretty", "To reduce file size", "To clean and prepare data for analysis", "To encrypt data"],
+      "options": ["A way for computers to see", "Computer graphics", "A field of AI that trains computers to interpret visual information", "Virtual reality"],
       "correct": 2
     },
     {
-      "question": "What does API stand for in software development?",
-      "options": ["Advanced Programming Interface", "Application Programming Interface", "Automated Program Integration", "Applied Programming Instructions"],
-      "correct": 1
+      "question": "What is the main purpose of data preprocessing?",
+      "options": ["To make data look pretty", "To reduce file size", "To encrypt data", "To clean and prepare data for analysis"],
+      "correct": 3
     },
     {
-      "question": "What is the difference between supervised and unsupervised learning?",
-      "options": ["Supervised uses labeled data, unsupervised doesn't", "Supervised is faster", "Unsupervised is more accurate", "No difference"],
+      "question": "What does API stand for in software development?",
+      "options": ["Application Programming Interface", "Advanced Programming Interface", "Automated Program Integration", "Applied Programming Instructions"],
       "correct": 0
     },
     {
-      "question": "What is a common use case for clustering algorithms?",
-      "options": ["Predicting house prices", "Grouping similar customers", "Image classification", "Text translation"],
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "options": ["Supervised is faster", "Supervised uses labeled data, unsupervised doesn't", "Unsupervised is more accurate", "No difference"],
       "correct": 1
+    },
+    {
+      "question": "What is a common use case for clustering algorithms?",
+      "options": ["Predicting house prices", "Image classification", "Grouping similar customers", "Text translation"],
+      "correct": 2
+    },
+    {
+      "question": "What is overfitting in machine learning?",
+      "options": ["When a model is too simple", "When training takes too long", "When the dataset is too large", "When a model performs well on training data but poorly on new data"],
+      "correct": 3
+    },
+    {
+      "question": "What is the purpose of cross-validation?",
+      "options": ["To evaluate model performance on unseen data", "To speed up training", "To reduce memory usage", "To visualize data"],
+      "correct": 0
+    },
+    {
+      "question": "What is feature engineering?",
+      "options": ["Building new hardware", "Creating or selecting relevant input variables for models", "Debugging code", "Optimizing algorithms"],
+      "correct": 1
+    },
+    {
+      "question": "What is the difference between classification and regression?",
+      "options": ["No difference", "Classification is faster", "Classification predicts categories, regression predicts continuous values", "Regression uses more data"],
+      "correct": 2
+    },
+    {
+      "question": "What is a confusion matrix used for?",
+      "options": ["To confuse the model", "To store data", "To train models", "To evaluate classification model performance"],
+      "correct": 3
     }
   ],
   "set5": [
     {
       "question": "What is the primary goal of Explainable AI (XAI)?",
-      "options": ["To make AI faster", "To make AI decisions interpretable and transparent", "To reduce AI costs", "To make AI smaller"],
-      "correct": 1
+      "options": ["To make AI decisions interpretable and transparent", "To make AI faster", "To reduce AI costs", "To make AI smaller"],
+      "correct": 0
     },
     {
       "question": "What is edge computing in the context of AI?",
@@ -39,17 +64,42 @@
     },
     {
       "question": "What is the purpose of A/B testing in machine learning?",
-      "options": ["To test two different models", "To compare performance of different approaches", "To debug code", "To train models faster"],
-      "correct": 1
+      "options": ["To test two different models", "To debug code", "To compare performance of different approaches", "To train models faster"],
+      "correct": 2
     },
     {
       "question": "What is synthetic data?",
-      "options": ["Fake data", "Artificially generated data that mimics real data", "Compressed data", "Encrypted data"],
-      "correct": 1
+      "options": ["Fake data", "Compressed data", "Encrypted data", "Artificially generated data that mimics real data"],
+      "correct": 3
     },
     {
       "question": "What is the main challenge with bias in AI?",
-      "options": ["It makes models slower", "It can lead to unfair or discriminatory outcomes", "It increases costs", "It reduces accuracy"],
+      "options": ["It can lead to unfair or discriminatory outcomes", "It makes models slower", "It increases costs", "It reduces accuracy"],
+      "correct": 0
+    },
+    {
+      "question": "What is transfer learning?",
+      "options": ["Moving data between computers", "Using a pre-trained model as starting point for a new task", "Transferring ownership of models", "Converting between file formats"],
+      "correct": 1
+    },
+    {
+      "question": "What is the purpose of regularization in machine learning?",
+      "options": ["To make models regular", "To speed up training", "To prevent overfitting by adding penalty terms", "To reduce data size"],
+      "correct": 2
+    },
+    {
+      "question": "What is ensemble learning?",
+      "options": ["Learning in groups", "A type of neural network", "Distributed computing", "Combining multiple models to improve performance"],
+      "correct": 3
+    },
+    {
+      "question": "What is the difference between precision and recall?",
+      "options": ["Precision measures accuracy of positive predictions, recall measures completeness", "No difference", "Precision is faster", "Recall is more important"],
+      "correct": 0
+    },
+    {
+      "question": "What is hyperparameter tuning?",
+      "options": ["Tuning hardware", "Optimizing model configuration parameters", "Adjusting data", "Fixing bugs"],
       "correct": 1
     }
   ]
