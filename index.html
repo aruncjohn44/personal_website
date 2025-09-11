@@ -398,6 +398,66 @@
       <span>Chat with my AI Assistant</span>
     </div>
 
+     <!-- AI Quiz Modal -->
+    <div id="quizModal" class="quiz-modal">
+      <div class="quiz-modal-content">
+        <div class="quiz-modal-header">
+          <h3>AI Knowledge Quiz</h3>
+          <span class="quiz-close">&times;</span>
+        </div>
+        <div class="quiz-container">
+          <div class="quiz-welcome" id="quizWelcome">
+            <h4>Test Your AI Knowledge!</h4>
+            <p>Take this 10-question quiz to test your understanding of Artificial Intelligence concepts.</p>
+            <button class="quiz-start-btn" id="startQuizBtn">Start Quiz</button>
+          </div>
+          
+          <div class="quiz-content" id="quizContent" style="display: none;">
+            <div class="quiz-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+              <span class="question-counter" id="questionCounter">Question 1 of 10</span>
+            </div>
+            
+            <div class="quiz-question">
+              <h4 id="questionText">Question will appear here...</h4>
+              <div class="quiz-options" id="quizOptions">
+                <!-- Options will be dynamically generated -->
+              </div>
+            </div>
+            
+            <div class="quiz-navigation">
+              <button class="quiz-btn quiz-prev" id="prevBtn" disabled>Previous</button>
+              <button class="quiz-btn quiz-next" id="nextBtn">Next</button>
+            </div>
+          </div>
+          
+          <div class="quiz-results" id="quizResults" style="display: none;">
+            <div class="results-content">
+              <h4>Quiz Complete!</h4>
+              <div class="score-display">
+                <div class="score-circle">
+                  <span class="score-text" id="finalScore">0/10</span>
+                </div>
+              </div>
+              <p class="score-message" id="scoreMessage">Great job!</p>
+              <div class="results-actions">
+                <button class="quiz-btn quiz-restart" id="restartBtn">Retake Quiz</button>
+                <button class="quiz-btn quiz-share" id="shareBtn">Share Score</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Quiz Button -->
+    <div id="quizButton" class="quiz-button">
+      <img src="images/quiz-icon.png" alt="Quiz" />
+      <span>AI Knowledge Quiz</span>
+    </div>
+
     <div class="contact-me">
       <h2>Get In Touch!</h2>
       <h3 class="contacttext">If you want to draw meaningful insights out of Data or just to have a chat.... reach out to me!</h3>
