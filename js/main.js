@@ -1,144 +1,210 @@
-// Smooth scroll functionality
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 
-// Intersection Observer for fade-in animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-visible');
-        }
-    });
-});
 
-document.querySelectorAll('.skills, .hobby, .Orgs').forEach((el) => {
-    el.classList.add('fade-in');
-    observer.observe(el);
-});
+/* =================================================================
+   Arun C John — AI Leadership Site
+   Interactions: nav, smooth scroll, scroll reveal, counters,
+   scroll progress, hero neural-network canvas.
+   (AIQuiz class + chatbot modal logic preserved below.)
+   ================================================================= */
 
-// Initialize tilt effect
-document.addEventListener('DOMContentLoaded', function() {
-    VanillaTilt.init(document.querySelectorAll(".skills1, .skills2"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.2
-    });
-});
 
-// Optional: Add scroll progress indicator
-window.addEventListener('scroll', () => {
-    const scrollProgress = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-    const progressBar = document.querySelector('.scroll-progress');
-    if (progressBar) {
-        progressBar.style.width = `${scrollProgress * 100}%`;
-    }
-});
-
-function createParticles() {
-  const title = document.querySelector('.Title');
-  // Reduce number of particles from 75 to 30
-  for (let i = 0; i < 30; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    particle.style.cssText = `
-      position: absolute;
-      width: ${Math.random() * 15 + 5}px; // Reduced max size
-      height: ${Math.random() * 15 + 5}px; // Reduced max size
-      background: rgba(104, 244, 165, ${Math.random() * 0.3 + 0.1}); // Reduced opacity
-      box-shadow: 0 0 ${Math.random() * 5 + 3}px rgba(104, 244, 165, 0.6); // Reduced glow
-      border-radius: 50%;
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      pointer-events: none;
-      z-index: 1;
-    `;
-    title.appendChild(particle);
-    animateParticle(particle);
-  }
-}
-
-function animateParticle(particle) {
-  const animation = particle.animate([
-    { 
-      transform: 'translate(0, 0) scale(1)',
-      opacity: Math.random() * 0.3 + 0.3 // Reduced opacity range
-    },
-    { 
-      transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) scale(${Math.random() * 0.3 + 0.5})`, // Reduced movement range
-      opacity: Math.random() * 0.2 + 0.1
-    }
-  ], {
-    duration: 4000 + Math.random() * 3000, // Reduced animation duration
-    direction: 'alternate',
-    iterations: Infinity,
-    easing: 'ease-in-out'
+// Smooth scroll for in-page anchors
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#' || targetId.length < 2) return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Close mobile nav if open
+    document.getElementById('nav')?.classList.remove('open');
   });
-} function typeWriterEffect() {
-  const text = " AI ";
-  const element = document.querySelector('.AI-text');
-  let index = 0;
-  
-  function type() {
-    if (index < text.length) {
-      element.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, 150);
-    }
-  }
-  
-  element.textContent = '';
-  type();
-}
+});
 
-function addParallaxEffect() {
-  const title = document.querySelector('.Title');
-  
-  title.addEventListener('mousemove', (e) => {
-    const { left, top, width, height } = title.getBoundingClientRect();
-    const x = (e.clientX - left) / width;
-    const y = (e.clientY - top) / height;
-    
-    document.querySelector('.cloud1').style.transform = 
-      `translate(${x * 30}px, ${y * 30}px)`;
-    document.querySelector('.cloud2').style.transform = 
-      `translate(${-x * 20}px, ${-y * 20}px)`;
+
+// Sticky nav state + scroll progress bar
+function onScroll() {
+  const nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 24);
+
+
+  const bar = document.getElementById('scrollProgress');
+  if (bar) {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+
+
+// Mobile nav toggle
+function initNav() {
+  const nav = document.getElementById('nav');
+  const toggle = document.getElementById('navToggle');
+  if (!nav || !toggle) return;
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
   });
 }
 
-function initSkillProgressBars() {
-  const skillBars = document.querySelectorAll('.skill-progress-bar');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+
+// Scroll-reveal animations
+function initReveal() {
+  const items = document.querySelectorAll('.reveal:not(.in)');
+  if (!('IntersectionObserver' in window) || !items.length) {
+    items.forEach((el) => el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const percent = entry.target.getAttribute('data-percent');
-        entry.target.style.width = percent;
+        entry.target.classList.add('in');
+        obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
-  
-  skillBars.forEach(bar => {
-    observer.observe(bar);
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  items.forEach((el) => io.observe(el));
+}
+
+
+// Animated number counters
+function initCounters() {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target).toString();
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach((el) => io.observe(el));
+}
+
+
+// Make the playground cards keyboard-accessible (they trigger modals on click)
+function initPlaygroundA11y() {
+  ['chatButton', 'quizButton'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        el.click();
+      }
+    });
   });
+}
+
+
+// Hero neural-network canvas (lightweight, respects reduced motion)
+function initHeroCanvas() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+
+  const ctx = canvas.getContext('2d');
+  let width, height, nodes, raf;
+  const COUNT = 54;
+  const LINK_DIST = 140;
+
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = rect.width;
+    height = rect.height;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+
+  function makeNodes() {
+    nodes = Array.from({ length: COUNT }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+    }));
+  }
+
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i];
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > width) n.vx *= -1;
+      if (n.y < 0 || n.y > height) n.vy *= -1;
+
+
+      for (let j = i + 1; j < nodes.length; j++) {
+        const m = nodes[j];
+        const dx = n.x - m.x, dy = n.y - m.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < LINK_DIST) {
+          const alpha = (1 - dist / LINK_DIST) * 0.4;
+          ctx.strokeStyle = `rgba(120, 150, 255, ${alpha})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(m.x, m.y);
+          ctx.stroke();
+        }
+      }
+    }
+    for (const n of nodes) {
+      ctx.fillStyle = 'rgba(160, 190, 255, 0.85)';
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+
+
+  function start() { resize(); makeNodes(); cancelAnimationFrame(raf); draw(); }
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(start, 200);
+  });
+  start();
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
-    typeWriterEffect();
-    addParallaxEffect();
-    initSkillProgressBars();
+  const yr = document.getElementById('year');
+  if (yr) yr.textContent = new Date().getFullYear();
 
-    // Initialize the AI Quiz
-    window.aiQuiz = new AIQuiz();
+
+  onScroll();
+  initNav();
+  initReveal();
+  initCounters();
+  initPlaygroundA11y();
+  initHeroCanvas();
+
+
+  // Initialize the AI Quiz
+  window.aiQuiz = new AIQuiz();
 });
+
+
 
 
 // Chatbot Modal Functionality
@@ -146,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatButton = document.getElementById('chatButton');
     const chatModal = document.getElementById('chatbotModal');
     const closeBtn = document.querySelector('.chatbot-close');
+
 
     // Open modal
     if (chatButton) {
@@ -156,12 +223,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
     // Close modal
     if (closeBtn) {
         closeBtn.addEventListener('click', function() {
             closeModal();
         });
     }
+
 
     // Close modal when clicking outside
     window.addEventListener('click', function(event) {
@@ -170,12 +239,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+
     // Close modal function
     function closeModal() {
         chatModal.style.display = 'none';
         chatModal.classList.remove('show');
         document.body.style.overflow = 'auto'; // Restore scrolling
     }
+
 
     // Close modal with Escape key
     document.addEventListener('keydown', function(event) {
@@ -184,6 +255,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
 
 
 // Quiz functionality
@@ -347,17 +420,18 @@ class AIQuiz {
                 }
             ]
         };
-        
+       
         this.questions = [];
         this.currentQuestionSet = '';
         this.currentQuestion = 0;
         this.score = 0;
         this.userAnswers = [];
         this.quizStarted = false;
-        
+       
         this.initializeQuiz();
         this.loadQuestionsFromJSON(); // Try to load from JSON first
     }
+
 
     // Method to load questions from JSON file
     async loadQuestionsFromJSON() {
@@ -373,22 +447,23 @@ class AIQuiz {
         }
     }
 
+
     // Method to randomly select a question set
     selectRandomQuestionSet() {
         const setKeys = Object.keys(this.questionSets);
         const randomIndex = Math.floor(Math.random() * setKeys.length);
         this.currentQuestionSet = setKeys[randomIndex];
         this.questions = [...this.questionSets[this.currentQuestionSet]];
-        
+       
         console.log(`Selected question set: ${this.currentQuestionSet}`);
-        
+       
         // Update welcome message to show which set is selected
         const welcomeMessage = document.getElementById('quizWelcomeMessage');
         if (welcomeMessage) {
             welcomeMessage.textContent = `Ready to test your AI knowledge? You'll be answering questions from ${this.currentQuestionSet.toUpperCase()}. Good luck! 🚀`;
         }
     }
-    
+   
     initializeQuiz() {
         const quizButton = document.getElementById('quizButton');
         const quizModal = document.getElementById('quizModal');
@@ -398,6 +473,7 @@ class AIQuiz {
         const prevBtn = document.getElementById('prevBtn');
         const restartBtn = document.getElementById('restartBtn');
         const shareBtn = document.getElementById('shareBtn');
+
 
         // Open modal
         if (quizButton) {
@@ -409,12 +485,14 @@ class AIQuiz {
             });
         }
 
+
         // Close modal
         if (closeBtn) {
             closeBtn.addEventListener('click', () => {
                 this.closeQuizModal();
             });
         }
+
 
         // Close modal when clicking outside
         window.addEventListener('click', (event) => {
@@ -423,12 +501,14 @@ class AIQuiz {
             }
         });
 
+
         // Start quiz
         if (startBtn) {
             startBtn.addEventListener('click', () => {
                 this.startQuiz();
             });
         }
+
 
         // Next button
         if (nextBtn) {
@@ -437,6 +517,7 @@ class AIQuiz {
             });
         }
 
+
         // Previous button
         if (prevBtn) {
             prevBtn.addEventListener('click', () => {
@@ -444,19 +525,21 @@ class AIQuiz {
             });
         }
 
+
         // Restart quiz
         if (restartBtn) {
             restartBtn.addEventListener('click', () => {
                 this.restartQuiz();
             });
         }
-        
+       
         // Share score
         if (shareBtn) {
             shareBtn.addEventListener('click', () => {
                 this.shareScore();
             });
         }
+
 
         // Close modal with Escape key
         document.addEventListener('keydown', (event) => {
@@ -465,7 +548,7 @@ class AIQuiz {
             }
         });
     }
-    
+   
     closeQuizModal() {
         const quizModal = document.getElementById('quizModal');
         quizModal.style.display = 'none';
@@ -473,20 +556,22 @@ class AIQuiz {
         document.body.style.overflow = 'auto';
     }
 
+
     startQuiz() {
         this.quizStarted = true;
         this.currentQuestion = 0;
         this.score = 0;
         this.userAnswers = [];
-        
+       
         document.getElementById('quizWelcome').style.display = 'none';
         document.getElementById('quizContent').style.display = 'block';
         document.getElementById('quizResults').style.display = 'none';
-        
+       
         this.displayQuestion();
     }
 
-    
+
+   
     displayQuestion() {
         const question = this.questions[this.currentQuestion];
         const questionText = document.getElementById('questionText');
@@ -496,18 +581,23 @@ class AIQuiz {
         const nextBtn = document.getElementById('nextBtn');
         const prevBtn = document.getElementById('prevBtn');
 
+
         // Update question text
         questionText.textContent = question.question;
 
+
         // Update question counter
         questionCounter.textContent = `Question ${this.currentQuestion + 1} of ${this.questions.length}`;
+
 
         // Update progress bar
         const progress = ((this.currentQuestion + 1) / this.questions.length) * 100;
         progressFill.style.width = `${progress}%`;
 
+
         // Clear previous options
         quizOptions.innerHTML = '';
+
 
         // Create option elements
         question.options.forEach((option, index) => {
@@ -516,21 +606,25 @@ class AIQuiz {
             optionElement.textContent = option;
             optionElement.setAttribute('data-index', index);
 
+
             // Check if this option was previously selected
             if (this.userAnswers[this.currentQuestion] === index) {
                 optionElement.classList.add('selected');
             }
 
+
             optionElement.addEventListener('click', () => {
                 this.selectOption(index);
             });
 
+
             quizOptions.appendChild(optionElement);
         });
 
+
         // Update navigation buttons
         prevBtn.disabled = this.currentQuestion === 0;
-        
+       
         if (this.currentQuestion === this.questions.length - 1) {
             nextBtn.textContent = 'Finish Quiz';
         } else {
@@ -538,18 +632,22 @@ class AIQuiz {
         }
     }
 
+
     selectOption(selectedIndex) {
         // Remove previous selection
         document.querySelectorAll('.quiz-option').forEach(option => {
             option.classList.remove('selected');
         });
 
+
         // Add selection to clicked option
         document.querySelector(`[data-index="${selectedIndex}"]`).classList.add('selected');
+
 
         // Store user answer
         this.userAnswers[this.currentQuestion] = selectedIndex;
     }
+
 
     nextQuestion() {
         if (this.currentQuestion < this.questions.length - 1) {
@@ -560,12 +658,14 @@ class AIQuiz {
         }
     }
 
+
     previousQuestion() {
         if (this.currentQuestion > 0) {
             this.currentQuestion--;
             this.displayQuestion();
         }
     }
+
 
     finishQuiz() {
         // Calculate score
@@ -576,21 +676,27 @@ class AIQuiz {
             }
         });
 
+
         this.showResults();
     }
+
 
     showResults() {
         document.getElementById('quizContent').style.display = 'none';
         document.getElementById('quizResults').style.display = 'block';
 
+
         const finalScore = document.getElementById('finalScore');
         const scoreMessage = document.getElementById('scoreMessage');
 
+
         finalScore.textContent = `${this.score}/${this.questions.length}`;
+
 
         // Generate score message based on performance
         let message = '';
         const percentage = (this.score / this.questions.length) * 100;
+
 
         if (percentage >= 90) {
             message = `Outstanding! You aced ${this.currentQuestionSet.toUpperCase()}! 🎉`;
@@ -604,36 +710,41 @@ class AIQuiz {
             message = `Keep studying ${this.currentQuestionSet.toUpperCase()}! There's always room to grow! 💪`;
         }
 
+
         scoreMessage.textContent = message;
+
 
         // Animate score circle
         this.animateScoreCircle();
     }
 
+
     animateScoreCircle() {
         const scoreCircle = document.querySelector('.score-circle');
         scoreCircle.style.transform = 'scale(0)';
-        
+       
         setTimeout(() => {
             scoreCircle.style.transition = 'transform 0.5s ease-out';
             scoreCircle.style.transform = 'scale(1)';
         }, 100);
     }
 
+
     restartQuiz() {
         this.currentQuestion = 0;
         this.score = 0;
         this.userAnswers = [];
-        
+       
         document.getElementById('quizResults').style.display = 'none';
         document.getElementById('quizWelcome').style.display = 'block';
         document.getElementById('quizContent').style.display = 'none';
     }
 
+
     shareScore() {
         const percentage = Math.round((this.score / this.questions.length) * 100);
         const shareText = `I just scored ${this.score}/${this.questions.length} (${percentage}%) on Arun's AI Knowledge Quiz! 🤖 Test your AI knowledge too!`;
-        
+       
         if (navigator.share) {
             navigator.share({
                 title: 'AI Quiz Results',
@@ -657,6 +768,7 @@ class AIQuiz {
         }
     }
 
+
     // Method to update questions (you can call this to replace placeholder questions)
     updateQuestions(newQuestions) {
         this.questions = newQuestions;
@@ -664,5 +776,5 @@ class AIQuiz {
     }
 }
 
-// Initialize the quiz when DOM is loaded
 
+// Initialize the quiz when DOM is loaded

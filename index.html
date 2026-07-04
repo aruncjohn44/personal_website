@@ -2,416 +2,563 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Arun's Personal Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun C John — Enterprise AI Systems & Generative AI Leadership</title>
+    <meta name="description" content="Arun C John designs and ships production-grade AI systems at enterprise scale — Generative AI, AI Agents, LLM applications, MLOps and Cloud AI platforms.">
+    <meta name="author" content="Arun C John">
 
-    <!-- CSS Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Arun C John — Enterprise AI Systems & Generative AI Leadership">
+    <meta property="og:description" content="Building enterprise AI systems that scale — LLMs, AI Agents, MLOps and Cloud AI.">
+    <meta property="og:image" content="images/arun.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
 
     <link rel="icon" href="favicon.ico">
+
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;1,300;1,400&family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap Scripts -->
 
+    <!-- Design system -->
+    <!-- Updated stylesheet path to match actual file name -->
+    <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-    <div class="Title">
-      <img class="cloud1" src="images\cloud_image_new.png"
-        alt="cloud image"/>
-      <h1>I'm Arun.</h1>
-      <h2>An <em class="AI-text">AI</em> Expert</h2>
-      <img class="cloud2" src="images\cloud_image_new.png"
-        alt="cloud image"/>
-      <img class="mountain" src="images\ai_img2.png"
-        alt="mountain image"/>
-        <div class="scroll-indicator">
-          <div class="mouse"></div>
-          <p>Scroll Down</p>
+  <body id="top">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#top" class="brand">
+          <span class="logo">A</span>
+          <span>Arun&nbsp;C&nbsp;John<small>Enterprise AI · MLOps</small></span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#work">Work</a>
+          <a href="#playground">Playground</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary btn-sm">Let's talk</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          </button>
         </div>
-    </div>
-    <div class="Middle">
-      <div class="profile">
-        <img class = "profile_img" src="images/arun.jpg" alt="arun's picture">
-        <h2>Hello there!</h2>
-        <p class="intro">I'm an AI/Data Science Expert with a passion for transforming raw data into meaningful insights and building intelligent systems that think, learn, and adapt. My mission? To unlock the hidden stories within data and harness the power of artificial intelligence to deliver real value to those who need it most.</p>
-        <h4>My journey in a nutshell.</h4>
-        <p class="intro">Originally from the beautiful state of Kerala in southern India, I hold a Master's degree in Thermal & Fluids Engineering. My professional adventure began at Mercedes-Benz as a Research Analyst, where I first discovered my love for data. From there, I ventured into the energy sector with ExxonMobil, then stepped into the consulting world with Accenture Strategy & Consulting as a Principal Data Scientist. I later explored the startup ecosystem at Theoriq AI as a Senior Solutions Engineer, and currently, I'm making waves at LTIMindtree as a Senior Specialist in MLOps.</p>        
       </div>
-      <div class="skills">
-        <h2 class="skills-text">My Core Skills or shall I call it my Superpowers... :)</h2>
+    </header>
 
-        <div class="row">
-          <div class="skills1 col-lg-6 col-sm-12">
-            <img class="skill-img1" src="images\machine-learning.png" alt="Machine Learning">
-            <h4 class="skilltitle">AI & Machine Learning</h4>
-            <p class="skilltext">Got my hands dirty building AI models the first time around 7 years back. Since then, never looked back!.
-              I could bring the power of AI into every other use cases irrespective of the domain since then!</p>
+
+    <main>
+      <!-- ===================== HERO ===================== -->
+      <section class="hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <span class="glow g1" aria-hidden="true"></span>
+        <span class="glow g2" aria-hidden="true"></span>
+
+
+        <div class="container hero-inner reveal in">
+          <div class="hero-badges">
+            <span class="pill"><span class="dot"></span>Available for AI leadership and advisory</span>
+            <span class="pill">Generative AI · Agents · MLOps</span>
           </div>
-          <div class="skills2 col-lg-6 col-sm-12">
-            <img class="skill-img2" src="images\manager.png" alt="">
-            <h4 class="skilltitle">Project & Program  Management</h4>
-            <p class="skilltext">I have managed programs mapped to business objectives that improve organizational performance.
-              Oversaw and coordinated the various projects and other strategic initiatives</p>
+          <h1>Building <span class="gradient-text">enterprise AI systems</span><br>that scale.</h1>
+          <p class="hero-lead">I help organizations turn ambitious ideas into production-ready AI — LLM applications, autonomous agents, cloud infrastructure and MLOps engineered for reliability, scale and measurable business value.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Start a conversation
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#work" class="btn btn-ghost">View featured work</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/aruncjds" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="https://twitter.com/John3Arun" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://medium.com/@aruncjohn" target="_blank" rel="noopener" aria-label="Medium / Writing">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+            </a>
+            <a href="mailto:aruncjohn@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            </a>
           </div>
         </div>
-        <div class="row">
-          <div class="skills1 col-lg-6 col-sm-12">
-            <img class="skill-img1" src="images\strategy2.png" alt="AI strategy">
-            <h4 class="skilltitle">AI Strategy</h4>
-            <p class="skilltext">I can provide an effective AI strategy that make sures information growth translates to business value!
-              </p>
-          </div>
-          <div class="skills2 col-lg-6 col-sm-12">
-            <img class="skill-img2" src="images\mlops.png" alt="">
-            <h4 class="skilltitle">MLOps</h4>
-            <p class="skilltext"> Whether its about moving ML apps to cloud, Managing pipelines, Scaling, Security
-                Or a million other problems, I can make that happen!.
-            </p>
-          </div>
-        </div>
 
-      </div>
 
-      <div class="skills-progress">
-        <h2>Technical Proficiency</h2>
-        <div class="skills-container">
-          <div class="skill-item">
-            <span class="skill-name">Machine Learning</span>
-            <div class="skill-progress-container">
-              <div class="skill-progress-bar" data-percent="90%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-name">Deep Learning</span>
-            <div class="skill-progress-container">
-              <div class="skill-progress-bar" data-percent="85%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-name">MLOps</span>
-            <div class="skill-progress-container">
-              <div class="skill-progress-bar" data-percent="80%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-name">Generative AI</span>
-            <div class="skill-progress-container">
-              <div class="skill-progress-bar" data-percent="80%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-name">Cloud Platforms</span>
-            <div class="skill-progress-container">
-              <div class="skill-progress-bar" data-percent="80%"></div>
+        <!-- Removed hero-stats container to reduce vertical space -->
+      </section>
+
+
+      <!-- ===================== TRUSTED BY ===================== -->
+      <section class="section--tight">
+        <div class="container">
+          <p class="trusted-label reveal">Trusted by teams at global companies</p>
+          <div class="marquee-wrap reveal">
+            <div class="marquee">
+              <img src="images/Mercedes-Benz.png" alt="Mercedes-Benz">
+              <img src="images/exxonmobil-logo.png" alt="ExxonMobil">
+              <img src="images/Accenture.png" alt="Accenture">
+              <img src="images/theoriq.png" alt="Theoriq AI">
+              <img src="images/general_mills.png" alt="General Mills">
+              <!-- duplicate set for seamless loop -->
+              <img src="images/Mercedes-Benz.png" alt="Mercedes-Benz">
+              <img src="images/exxonmobil-logo.png" alt="ExxonMobil">
+              <img src="images/Accenture.png" alt="Accenture">
+              <img src="images/theoriq.png" alt="Theoriq AI">
+              <img src="images/general_mills.png" alt="General Mills">
             </div>
           </div>
         </div>
-      </div>      
+      </section>
 
-      <div class="generative-ai">
-        <h2 class="gentext"> Generative AI </h2>
-        <p class="gentext_desc">Highly skilled in leveraging generative AI algorithms to transform ideas into tangible, cutting-edge realities.</p>
-        <div class="image-row">
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <img src="images\openai.png" alt="numpy" class="genai-img">
+
+      <!-- ===================== ABOUT ===================== -->
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <span class="eyebrow"><span class="dot"></span>About</span>
+            <h2 class="section-title">An AI leader who ships systems, not slideware.</h2>
+            <p>Over the last eight years I've built and deployed machine learning and generative AI across automotive, energy, consulting and enterprise software — from Mercedes-Benz and ExxonMobil to Accenture and LTIMindtree.</p>
+            <p>Today my focus is the engineering that makes AI real in production: LLM applications, autonomous agents, RAG pipelines, MLOps platforms and cloud AI architecture. I bridge strategy and delivery — designing solutions that are reliable, scalable and tied to clear business outcomes.</p>
+            <div class="hero-actions" style="margin-top:32px">
+              <a href="#capabilities" class="btn btn-ghost">Explore capabilities</a>
+            </div>
           </div>
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <img src="images\claude2.jpg" alt="python" class="genai-img">
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <img src="images\langchain.png" alt="pytorch" class="genai-img">
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <img src="images\llamaindex.png" alt="scikitlearn" class="genai-img">
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <img src="images\stabilityai.png" alt="pytorch" class="genai-img">
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <img src="images\llama2.jpg" alt="scikitlearn" class="genai-img">
+          <div class="about-portrait reveal" data-delay="2">
+            <div class="frame">
+              <img src="images/arun.jpg" alt="Arun C John">
+            </div>
+            <div class="tag"><span class="dot"></span>Lead Machine Learning Engineer @ General Mills</div>
           </div>
         </div>
-        <p class="gentext_desc">So how do you implement an AI strategy in your organization? Start by identifying key pain points or areas with high potential 
-          for innovation within the sector. Leverage Generative AI's creative capabilities to prototype new products, 
-          streamline complex processes, and create personalized experiences, fostering a competitive edge. 
-          Collaborate closely with domain experts and data scientists to iteratively refine and scale the Generative AI applications, 
-          ensuring alignment with industry-specific goals and market demands</p>
-      </div>
+      </section>
 
-      <div class="content-writing">
 
-        <div class="content-writing-text">
-          <h2> Technical Content Writing</h2>
-          <p class="content-text-desc">I wrote content for reputed technical blogs and also on personal spaces.
-            I'm delighted to share some of the articles I've written right here.. There are a bunch of them. Let me know your feedback...I am all ears!.
-        </p>
+      <!-- ===================== CAPABILITIES ===================== -->
+      <section class="section" id="capabilities">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow"><span class="dot"></span>Capabilities</span>
+            <h2 class="section-title">What I do.</h2>
+            <p class="section-sub">End-to-end AI capability — from strategy and architecture to the production systems that run at enterprise scale.</p>
+          </div>
+          <div class="grid grid-4">
+            <article class="card reveal" data-delay="1">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+              <h3>Enterprise AI Strategy</h3>
+              <p>Roadmaps that turn AI investment into measurable business outcomes and lasting advantage.</p>
+            </article>
+            <article class="card reveal" data-delay="2">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.5L19 10l-5.1 1.5L12 17l-1.9-5.5L5 10l5.1-1.5z"/><path d="M19 16l.7 2 .3.3 2 .7-2 .7-.3.3-.7 2-.7-2-.3-.3-2-.7 2-.7.3-.3z"/></svg></div>
+              <h3>Generative AI</h3>
+              <p>LLM apps, RAG and creative AI built with OpenAI, Anthropic, LangChain and LlamaIndex.</p>
+            </article>
+            <article class="card reveal" data-delay="3">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div>
+              <h3>AI Agents</h3>
+              <p>Autonomous, tool-enabled agents that automate complex multi-step workflows end to end.</p>
+            </article>
+            <article class="card reveal" data-delay="4">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <h3>LLM Applications</h3>
+              <p>Fine-tuning, prompt engineering and evaluation pipelines that make language systems reliable in production.</p>
+            </article>
+            <article class="card reveal" data-delay="1">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <h3>Computer Vision</h3>
+              <p>Detection, classification and inspection models deployed into real-world environments.</p>
+            </article>
+            <article class="card reveal" data-delay="2">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></div>
+              <h3>MLOps</h3>
+              <p>CI/CD, monitoring, scaling, and governance for models that run dependably in production.</p>
+            </article>
+            <article class="card reveal" data-delay="3">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 1 0 6.6 15.5"/><path d="M8 17h9.5"/></svg></div>
+              <h3>Cloud AI Platforms</h3>
+              <p>Architecting AI workloads on AWS, Azure and Databricks for scale, security and cost.</p>
+            </article>
+            <article class="card reveal" data-delay="4">
+              <div class="cap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+              <h3>Solution Architecture</h3>
+              <p>Designing the data, model and infrastructure layers that make AI dependable at scale.</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="articles-content-writing">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            </div>            
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="https://dagshub.com/blog/mastering-duplicate-data-management-in-machine-learning-for-optimal-model-performance/" target="_blank">
-                <img src="images/dagshub_datadedup.png" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>Mastering Duplicate Data Management in Machine Learning</h5>
+
+      <!-- ===================== FEATURED WORK ===================== -->
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow"><span class="dot"></span>Featured Work</span>
+            <h2 class="section-title">Production AI systems, end to end.</h2>
+            <p class="section-sub">Representative systems I've architected and delivered — the problem, the architecture and the impact.</p>
+          </div>
+
+
+          <div class="grid" style="gap:24px">
+            <article class="project reveal">
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag-chip">LLMs</span><span class="tag-chip">RAG</span><span class="tag-chip">LangChain</span><span class="tag-chip">Vector DB</span><span class="tag-chip">AWS</span>
                 </div>
-                </a>
+                <h3>Enterprise RAG Knowledge Platform</h3>
+                <div class="project-row"><div class="k">Problem</div><div class="v">Critical institutional knowledge was buried across thousands of documents, slowing expert decisions.</div></div>
+                <div class="project-row"><div class="k">Architecture</div><div class="v">Retrieval-augmented generation with semantic chunking, a managed vector store and an LLM orchestration layer with grounded citations.</div></div>
+                <div class="project-row"><div class="k">Outcome</div><div class="v">Self-serve answers with sources, cutting time-to-insight dramatically across teams.</div></div>
               </div>
-              <div class="carousel-item">
-                <a href="http://neptune.ai/blog/build-ci-cd-mlops-pipeline" target="_blank">
-                <img src="images/neptune_mlops.jpeg" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>Build CI/CD MLOps Pipeline</h5>
+              <div class="project-visual project-visual--rag">
+                <img class="project-image" src="images/rag-platform-diagram.png" alt="RAG platform diagram"/>
+                <div class="metric-badge"><div class="big gradient-text">~60%</div><div class="cap">faster knowledge retrieval</div></div>
+              </div>
+            </article>
+
+
+            <article class="project reveal" data-delay="1">
+              <div class="project-visual">
+                <img class="project-image" src="images/mlops-platform-diagram.png" alt="MLOps platform diagram"/>
+                <div class="metric-badge"><div class="big gradient-text">95%</div><div class="cap">defect detection accuracy</div></div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags"><span class="tag-chip">MLOps</span><span class="tag-chip">MLflow</span><span class="tag-chip">Databricks</span><span class="tag-chip">CI/CD</span></div>
+                <h3>Production MLOps Platform</h3>
+                <div class="project-row"><div class="k">Problem</div><div class="v">Models took weeks to move from notebook to production, with no monitoring once live.</div></div>
+                <div class="project-row"><div class="k">Architecture</div><div class="v">Automated CI/CD pipelines, a central model registry, drift monitoring and one-click deployment.</div></div>
+                <div class="project-row"><div class="k">Outcome</div><div class="v"><span class="gradient-text" style="font-weight:600">~70% shorter</span> deployment cycle with full observability.</div></div>
+              </div>
+            </article>
+
+
+            <div class="grid grid-2" style="gap:24px">
+              <article class="project reveal" data-delay="2" style="grid-template-columns:1fr">
+                <div class="project-body">
+                  <div class="project-tags"><span class="tag-chip">Computer Vision</span><span class="tag-chip">YOLO</span><span class="tag-chip">PyTorch</span><span class="tag-chip">Edge</span></div>
+                  <h3>Computer Vision Quality Inspection</h3>
+                  <div class="project-row"><div class="k">Problem</div><div class="v">Manual visual inspection was slow, costly and inconsistent across shifts.</div></div>
+                  <div class="project-row"><div class="k">Architecture</div><div class="v">Real-time object detection deployed at the edge with an automated alerting and review layer.</div></div>
+                  <div class="project-row"><div class="k">Outcome</div><div class="v">Consistent, around-the-clock inspection with measurable quality gains.</div></div>
                 </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="http://neptune.ai/blog/active-learning-strategies-tools-use-cases" target="_blank">
-                <img src="images/article_thunbnail_act_lng.jfif" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>Active Learning Strategies, Tools & Use Cases</h5>
+              </article>
+
+
+              <article class="project reveal" style="grid-template-columns:1fr">
+                <div class="project-body">
+                  <div class="project-tags"><span class="tag-chip">AI Agents</span><span class="tag-chip">LLMs</span><span class="tag-chip">Orchestration</span></div>
+                  <h3>Multi-Agent Automation System</h3>
+                  <div class="project-row"><div class="k">Problem</div><div class="v">Repetitive, multi-step operational workflows consumed scarce expert time.</div></div>
+                  <div class="project-row"><div class="k">Architecture</div><div class="v">Coordinated LLM agents with tool access, guardrails and human-in-the-loop review.</div></div>
+                  <div class="project-row"><div class="k">Outcome</div><div class="v"><span class="gradient-text" style="font-weight:600">3× throughput</span> on previously manual workflows.</div></div>
                 </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="http://neptune.ai/blog/deploying-computer-vision-models">
-                <img src="images/article_thunbnail_cv_dep.jfif" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>Deploying Computer Vision Models</h5>
-                </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="https://arucjohn.blogspot.com/2021/09/the-amazing-stylegan-or-style.html">
-                <img src="images/article_thunbnail_gan.jfif" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>The Amazing StyleGAN</h5>
-                </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="https://medium.com/@aruncjohn/optimizers-in-machine-learning-a3e40a83686d">
-                <img src="images/article_thunbnail_pop_optim.jpg" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>Optimizers in Machine Learning</h5>
-                </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="https://medium.com/@info.martinanto/yolov3-for-weapon-detection-artificial-intelligence-dialling-911-6a4b47ba637c">
-                <img src="images/article_thunbnail_yolo.jpg" class="carousel-image" alt="...">
-                <div class="carousel-caption">
-                  <h5>YOLOv3 for Weapon Detection</h5>
-                </div>
-                </a>
-              </div>
-            </div>            
-            
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h2 class="tool-text">AI Tools I am hands on</h2>
-        <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\numpy.png" alt="numpy" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\python.png" alt="python" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\pytorch.png" alt="pytorch" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\scikit_learn.png" alt="scikitlearn" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\scipy.png" alt="scipy" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\spacy.png" alt="spacy" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\tensorflow.png" alt="tensorflow" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\prophet.png" alt="prophet" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\aws.png" alt="aws" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\databricks.png" alt="databricks" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\mlflow.png" alt="mlflow" class="tool-img">
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img src="images\h2o.png" alt="h2o" class="tool-img">
-            </div>
-        </div>
-
-      </div>
-
-      <div class="Orgs">
-        <h2 class="Orgs-text"> Organisations I have worked for.</h2>
-          <div class="row org-rows">
-            <div class="col-lg-2 col-md-6 col-sm-4">
-              <img src="images\Mercedes-Benz.png" alt="Mercedes-Benz" class="org-img1">
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-4">
-              <img src="images\exxonmobil-logo.png" alt="ExxonMobil" class="org-img2">
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-4">
-              <img src="images\Accenture.png" alt="Accenture" class="org-img3">
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-4">
-              <img src="images\theoriq.png" alt="Theoriq" class="org-img4">
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-4">
-              <img src="images\ltimindtree.png" alt="ltimindtree" class="org-img5">
-            </div>
-        </div>
-
-      </div>
-
-      <div class="hobby">
-        <h2 class="hobby-text">My Hobbies</h2>
-
-        <div class="row">
-            <div class="col-lg-4 ">
-              <img src="images\cyclist3.gif" alt="cycling image" class="hobby_img">
-              <p>Well you can't be sad while riding a Bicycle!.So grab your bike, get going already!</p>
-            </div>
-            <div class="col-lg-4 hobby_img">
-              <img src="images\reading.png" alt="reading" class="hobby_img">
-              <p>Thats right! I love reading....So if have any book to recommend, please tell me!</p>
-            </div>
-            <div class="col-lg-4 hobby_img">
-              <img src="images\volunteer.png" alt="volunteering" class="hobby_img">
-              <p>Life's most persistent and urgent question is, what are you doing for others?. Well, join us is making your surroundings 
-                green or even teaching the underprivileged! Let's do our part! <html lang="en">
-              <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-              </head>
-              <body>
-
-              </body>
-              </html></p>
-            </div>
-        </div>
-
-      </div>
-      <hr>
-    </div>
-    <div class="testimonials">
-      <h2>What People Say</h2>
-      <div class="testimonial-container">
-        <div class="testimonial-card">
-          <div class="testimonial-inner">
-            <div class="testimonial-front">
-              <img src="images/karan_pp.png" alt="Client" class="testimonial-img">
-              <h3>Karan Vijayvargia</h3>
-              <p class="testimonial-position">Lead Data Scientist, Moneris</p>
-            </div>
-            <div class="testimonial-back">
-              <p class="testimonial-text">"Arun is dynamic personality who believes in learning cutting edge technology for problem solving. I found him as a person who is agile, hard working and quick learner. He has good managerial skills and is a great team player. He is ready to take up complex tasks and you can depend on him to get task done in time. From my experience he will be an asset to any team. "</p>
+              </article>
             </div>
           </div>
         </div>
-        
-        <div class="testimonial-card">
-          <div class="testimonial-inner">
-            <div class="testimonial-front">
-              <img src="images/sumod_pp.png" alt="Client" class="testimonial-img">
-              <h3>Sumod Sethumadhavan</h3>
-              <p class="testimonial-position">Principal Engineer, KLA Corporation</p>
+      </section>
+
+
+      <!-- ===================== AI PLAYGROUND ===================== -->
+      <section class="section" id="playground">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="eyebrow"><span class="dot"></span>AI Playground</span>
+            <h2 class="section-title">Try the AI, don't just read about it.</h2>
+            <p class="section-sub">Two interactive demos on this site — an AI assistant that answers questions about my work, and a quiz to test your AI knowledge.</p>
+          </div>
+          <div class="playground-grid">
+            <!-- id="chatButton" preserved so existing JS wires the chatbot modal -->
+            <div class="play-card chat reveal" id="chatButton" role="button" tabindex="0" data-delay="1">
+              <span class="live-dot">Live</span>
+              <span class="glow-blob"></span>
+              <div class="play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <h3>AI Chat Assistant</h3>
+              <p>Ask my AI assistant about my experience, projects, and approach to building enterprise AI. It answers in real time.</p>
+              <span class="play-link">Open the assistant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </div>
-            <div class="testimonial-back">
-              <p class="testimonial-text">"I highly recommend Arun C. John, a colleague at Exxon Mobil, whose exceptional skills in data science have greatly contributed to our projects. Arun's remarkable ability to analyze complex datasets and derive actionable insights has been instrumental in driving our business strategies forward. He combines technical prowess with a collaborative spirit, making him not only a reliable problem-solver but also a valued team player. His dedication, innovative approach, and positive attitude make him a standout professional in any data science endeavor. It's been a privilege to work alongside Arun, and I am confident in his continued success in the field."</p>
+            <!-- id="quizButton" preserved so existing JS wires the quiz modal -->
+            <div class="play-card quiz reveal" id="quizButton" role="button" tabindex="0" data-delay="2">
+              <span class="live-dot">Live</span>
+              <span class="glow-blob"></span>
+              <div class="play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg></div>
+              <h3>AI Knowledge Quiz</h3>
+              <p>Ten questions across machine learning, deep learning and MLOps — randomly drawn from a growing question bank.</p>
+              <span class="play-link">Take the quiz <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
-        
-        <div class="testimonial-card">
-          <div class="testimonial-inner">
-            <div class="testimonial-front">
-              <img src="images/vibhav_pp.png" alt="Client" class="testimonial-img">
-              <h3>Vibhav Patil</h3>
-              <p class="testimonial-position">Data Science Manager, Accenture</p>
+      </section>
+
+
+      <!-- ===================== EXPERTISE ===================== -->
+      <section class="section" id="expertise">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow"><span class="dot"></span>Technical Expertise</span>
+            <h2 class="section-title">The stack behind the systems.</h2>
+            <p class="section-sub">The tools, frameworks and platforms I use to ship production AI.</p>
+          </div>
+
+
+          <div class="badge-cloud reveal" data-delay="1">
+            <span class="exp-badge"><span class="ring"></span>Production AI</span>
+            <span class="exp-badge"><span class="ring"></span>LLMs</span>
+            <span class="exp-badge"><span class="ring"></span>RAG</span>
+            <span class="exp-badge"><span class="ring"></span>AI Agents</span>
+            <span class="exp-badge"><span class="ring"></span>Agent Frameworks</span>
+            <span class="exp-badge"><span class="ring"></span>Prompt Engineering</span>
+            <span class="exp-badge"><span class="ring"></span>Vector Databases</span>
+            <span class="exp-badge"><span class="ring"></span>MLOps</span>
+            <span class="exp-badge"><span class="ring"></span>AWS</span>
+            <span class="exp-badge"><span class="ring"></span>Azure</span>
+            <span class="exp-badge"><span class="ring"></span>Databricks</span>
+            <span class="exp-badge"><span class="ring"></span>Cloud AI</span>
+          </div>
+
+
+          <div class="marquee-wrap marquee-wrap--vibrant reveal" style="margin-top:48px">
+            <div class="marquee">
+              <img src="images/python.png" alt="Python">
+              <img src="images/pytorch.png" alt="PyTorch">
+              <img src="images/tensorflow.png" alt="TensorFlow">
+              <img src="images/scikit_learn.png" alt="scikit-learn">
+              <img src="images/numpy.png" alt="NumPy">
+              <img src="images/scipy.png" alt="SciPy">
+              <img src="images/spacy.png" alt="spaCy">
+              <img src="images/openai.png" alt="OpenAI">
+              <img src="images/claude2.jpg" alt="Anthropic Claude">
+              <img src="images/langchain.png" alt="LangChain">
+              <img src="images/llamaindex.png" alt="LlamaIndex">
+              <img src="images/faiss.png" alt="FAISS">
+              <img src="images/mlflow.png" alt="MLflow">
+              <img src="images/databricks.png" alt="Databricks">
+              <img src="images/aws.png" alt="AWS">
+              <img src="images/h2o.png" alt="H2O">
+              <img src="images/prophet.png" alt="Prophet">
+              <img src="images/stabilityai.png" alt="Stability AI">
+              <!-- duplicate set for seamless loop -->
+              <img src="images/python.png" alt="Python">
+              <img src="images/pytorch.png" alt="PyTorch">
+              <img src="images/tensorflow.png" alt="TensorFlow">
+              <img src="images/scikit_learn.png" alt="scikit-learn">
+              <img src="images/numpy.png" alt="NumPy">
+              <img src="images/scipy.png" alt="SciPy">
+              <img src="images/spacy.png" alt="spaCy">
+              <img src="images/openai.png" alt="OpenAI">
+              <img src="images/claude2.jpg" alt="Anthropic Claude">
+              <img src="images/langchain.png" alt="LangChain">
+              <img src="images/llamaindex.png" alt="LlamaIndex">
+              <img src="images/faiss.png" alt="FAISS">
+              <img src="images/mlflow.png" alt="MLflow">
+              <img src="images/databricks.png" alt="Databricks">
+              <img src="images/aws.png" alt="AWS">
+              <img src="images/h2o.png" alt="H2O">
+              <img src="images/prophet.png" alt="Prophet">
+              <img src="images/stabilityai.png" alt="Stability AI">
             </div>
-            <div class="testimonial-back">
-              <p class="testimonial-text">"I’ve had the pleasure of working with Arun for the past three years and I can confidently say that he is an exceptional professional. His ability to quickly grasp and implement the latest technologies in projects has been instrumental in driving team’s success. Arun’s technical skills are top-notch, but what sets him apart is his leadership quality. He leads by example, fostering an environment of innovation and continuous learning. His guidance has been invaluable, not just in terms of work, but also in shaping our professional growth. As a mentor, Arun has a knack for identifying potential and nurturing it. He has been a great friend and his approachable nature makes him a go-to person for any kind of assistance. I wholeheartedly recommend Arun for any team or organization looking to push the boundaries of what’s possible."</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===================== WRITING ===================== -->
+      <section class="section" id="writing">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow"><span class="dot"></span>Writing</span>
+            <h2 class="section-title">Thought leadership &amp; technical writing.</h2>
+            <p class="section-sub">Published with DagsHub, Neptune.ai, Medium and more — translating advanced AI into practical engineering.</p>
+          </div>
+
+
+          <div class="grid grid-3">
+            <a class="pub-card reveal" data-delay="1" href="https://dagshub.com/blog/mastering-duplicate-data-management-in-machine-learning-for-optimal-model-performance/" target="_blank" rel="noopener">
+              <div class="pub-thumb"><img src="images/dagshub_datadedup.png" alt="Duplicate data management article thumbnail"></div>
+              <div class="pub-meta"><span class="pub-source">DagsHub</span><span class="sep"></span><span>9 min read</span></div>
+              <h3>Mastering Duplicate Data Management in Machine Learning</h3>
+              <p>Practical strategies to detect and manage duplicate data for optimal model performance.</p>
+              <span class="pub-read">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </a>
+            <a class="pub-card reveal" data-delay="2" href="http://neptune.ai/blog/build-ci-cd-mlops-pipeline" target="_blank" rel="noopener">
+              <div class="pub-thumb"><img src="images/neptune_mlops.jpeg" alt="CI/CD MLOps pipeline article thumbnail"></div>
+              <div class="pub-meta"><span class="pub-source">Neptune.ai</span><span class="sep"></span><span>12 min read</span></div>
+              <h3>Build a CI/CD MLOps Pipeline</h3>
+              <p>An end-to-end guide to designing continuous delivery pipelines for machine learning.</p>
+              <span class="pub-read">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </a>
+            <a class="pub-card reveal" data-delay="3" href="http://neptune.ai/blog/active-learning-strategies-tools-use-cases" target="_blank" rel="noopener">
+              <div class="pub-thumb"><img src="images/article_thunbnail_act_lng.jfif" alt="Active learning article thumbnail"></div>
+              <div class="pub-meta"><span class="pub-source">Neptune.ai</span><span class="sep"></span><span>11 min read</span></div>
+              <h3>Active Learning: Strategies, Tools &amp; Use Cases</h3>
+              <p>How active learning reduces labeling cost while improving model quality.</p>
+              <span class="pub-read">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </a>
+            <a class="pub-card reveal" data-delay="1" href="http://neptune.ai/blog/deploying-computer-vision-models" target="_blank" rel="noopener">
+              <div class="pub-thumb"><img src="images/article_thunbnail_cv_dep.jfif" alt="Deploying computer vision models article thumbnail"></div>
+              <div class="pub-meta"><span class="pub-source">Neptune.ai</span><span class="sep"></span><span>10 min read</span></div>
+              <h3>Deploying Computer Vision Models</h3>
+              <p>Approaches and trade-offs for shipping computer vision models to production.</p>
+              <span class="pub-read">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </a>
+            <a class="pub-card reveal" data-delay="2" href="https://arucjohn.blogspot.com/2021/09/the-amazing-stylegan-or-style.html" target="_blank" rel="noopener">
+              <div class="pub-thumb"><img src="images/article_thunbnail_gan.jfif" alt="StyleGAN article thumbnail"></div>
+              <div class="pub-meta"><span class="pub-source">Blog</span><span class="sep"></span><span>7 min read</span></div>
+              <h3>The Amazing StyleGAN</h3>
+              <p>A deep dive into style-based generative adversarial networks and how they work.</p>
+              <span class="pub-read">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </a>
+            <a class="pub-card reveal" data-delay="3" href="https://medium.com/@aruncjohn/optimizers-in-machine-learning-a3e40a83686d" target="_blank" rel="noopener">
+              <div class="pub-thumb"><img src="images/article_thunbnail_pop_optim.jpg" alt="Optimizers in machine learning article thumbnail"></div>
+              <div class="pub-meta"><span class="pub-source">Medium</span><span class="sep"></span><span>8 min read</span></div>
+              <h3>Optimizers in Machine Learning</h3>
+              <p>A clear tour of the optimization algorithms that power model training.</p>
+              <span class="pub-read">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===================== TESTIMONIALS ===================== -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="section-head center reveal">
+            <span class="eyebrow"><span class="dot"></span>Testimonials</span>
+            <h2 class="section-title">What leaders I've worked with say.</h2>
+          </div>
+          <div class="tst-grid">
+            <figure class="tst-card reveal" data-delay="1">
+              <blockquote class="tst-quote"><span class="mark">&ldquo;</span>Arun is a dynamic personality who believes in learning cutting-edge technology for problem solving — agile, hardworking and a quick learner. He has strong managerial skills, is a great team player, and you can depend on him to get the task done on time. He will be an asset to any team.</blockquote>
+              <figcaption class="tst-person">
+                <img src="images/karan_pp.png" alt="Karan Vijayvargia">
+                <div><div class="name">Karan Vijayvargia</div><div class="role">Lead Data Scientist, Moneris</div></div>
+              </figcaption>
+            </figure>
+            <figure class="tst-card reveal" data-delay="2">
+              <blockquote class="tst-quote"><span class="mark">&ldquo;</span>Arun's exceptional skills in data science greatly contributed to our projects at ExxonMobil. His ability to analyze complex datasets and derive actionable insights was instrumental in driving our strategies forward. He combines technical prowess with a collaborative spirit — a reliable problem-solver and a valued team player.</blockquote>
+              <figcaption class="tst-person">
+                <img src="images/sumod_pp.png" alt="Sumod Sethumadhavan">
+                <div><div class="name">Sumod Sethumadhavan</div><div class="role">Principal Engineer, KLA Corporation</div></div>
+              </figcaption>
+            </figure>
+            <figure class="tst-card reveal" data-delay="3">
+              <blockquote class="tst-quote"><span class="mark">&ldquo;</span>I've worked with Arun for three years and he is an exceptional professional. His ability to quickly grasp and implement the latest technologies has been instrumental to our team's success. He leads by example, fostering innovation and continuous learning. I wholeheartedly recommend him to any team looking to push the boundaries of what's possible.</blockquote>
+              <figcaption class="tst-person">
+                <img src="images/vibhav_pp.png" alt="Vibhav Patil">
+                <div><div class="name">Vibhav Patil</div><div class="role">Data Science Manager, Accenture</div></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===================== CONTACT ===================== -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-panel reveal">
+            <span class="eyebrow"><span class="dot"></span>Get in touch</span>
+            <h2>Let's build something<br><span class="gradient-text">intelligent.</span></h2>
+            <p>Whether you're scaling AI in production, exploring generative AI, or just want to trade ideas — I'd love to hear from you.</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:aruncjohn@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                Email me
+              </a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/aruncjds" target="_blank" rel="noopener">Connect on LinkedIn</a>
             </div>
+            <p class="contact-quote">"You can have data without information, but you cannot have information without data." — Daniel Keys Moran</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#top" class="brand"><span class="logo">A</span><span>Arun&nbsp;C&nbsp;John</span></a>
+            <p>Designing and delivering production-grade AI systems for global organizations — generative AI, agents, MLOps and cloud AI.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <a href="#about">About</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#work">Featured Work</a>
+            <a href="#writing">Writing</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Beyond Work</h4>
+            <div class="footer-hobbies">
+              <span>Cycling</span>
+              <span>Reading</span>
+              <span>Volunteering</span>
+            </div>
+            <h4 style="margin-top:24px">Elsewhere</h4>
+            <a href="https://medium.com/@aruncjohn" target="_blank" rel="noopener">Medium</a>
+            <a href="https://github.com/aruncjohn44" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year">2026</span> Arun C John. Built with intent.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/aruncjds" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="https://twitter.com/John3Arun" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="mailto:aruncjohn@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Chatbot Modal -->
+    </footer>
+
+
+    <!-- ===================== CHATBOT MODAL (IDs preserved for JS) ===================== -->
     <div id="chatbotModal" class="chatbot-modal">
       <div class="chatbot-modal-content">
         <div class="chatbot-modal-header">
           <h3>Chat with My AI Assistant</h3>
-          <span class="chatbot-close">&times;</span>
+          <button class="chatbot-close" aria-label="Close">&times;</button>
         </div>
-        <iframe 
+        <iframe
           src="https://cjhugger-profile-chatbot-new.hf.space"
-          frameborder="0" 
-          width="100%" 
+          frameborder="0"
+          width="100%"
           height="500"
           title="AI Chatbot">
         </iframe>
       </div>
     </div>
 
-    <!-- Floating Chat Button -->
-    <div id="chatButton" class="chat-button">
-      <img src="images/chat-icon.png" alt="Chat" />
-      <span>Chat with my AI Assistant</span>
-    </div>
 
-     <!-- AI Quiz Modal -->
+    <!-- ===================== QUIZ MODAL (IDs preserved for JS) ===================== -->
     <div id="quizModal" class="quiz-modal">
       <div class="quiz-modal-content">
         <div class="quiz-modal-header">
           <h3>AI Knowledge Quiz</h3>
-          <span class="quiz-close">&times;</span>
+          <button class="quiz-close" aria-label="Close">&times;</button>
         </div>
         <div class="quiz-container">
-          <div class="quiz-welcome" id="quizWelcome">
-            <h4>Test Your AI Knowledge!</h4>
-            <p>Take this 10-question quiz to test your understanding of Artificial Intelligence concepts.</p>
+            <div class="quiz-welcome" id="quizWelcome">
+            <h4>Test Your AI Knowledge</h4>
+            <p id="quizWelcomeMessage">Take this 10-question quiz to test your AI knowledge.</p>
             <button class="quiz-start-btn" id="startQuizBtn">Start Quiz</button>
           </div>
-          
+
+
           <div class="quiz-content" id="quizContent" style="display: none;">
             <div class="quiz-progress">
               <div class="progress-bar">
@@ -419,20 +566,21 @@
               </div>
               <span class="question-counter" id="questionCounter">Question 1 of 10</span>
             </div>
-            
+
+
             <div class="quiz-question">
               <h4 id="questionText">Question will appear here...</h4>
-              <div class="quiz-options" id="quizOptions">
-                <!-- Options will be dynamically generated -->
-              </div>
+              <div class="quiz-options" id="quizOptions"></div>
             </div>
-            
+
+
             <div class="quiz-navigation">
               <button class="quiz-btn quiz-prev" id="prevBtn" disabled>Previous</button>
               <button class="quiz-btn quiz-next" id="nextBtn">Next</button>
             </div>
           </div>
-          
+
+
           <div class="quiz-results" id="quizResults" style="display: none;">
             <div class="results-content">
               <h4>Quiz Complete!</h4>
@@ -452,27 +600,10 @@
       </div>
     </div>
 
-    <!-- Floating Quiz Button -->
-    <div id="quizButton" class="quiz-button">
-      <img src="images/quiz-icon.png" alt="Quiz" />
-      <span>AI Knowledge Quiz</span>
-    </div>
 
-    <div class="contact-me">
-      <h2>Get In Touch!</h2>
-      <h3 class="contacttext">If you want to draw meaningful insights out of Data or just to have a chat.... reach out to me!</h3>
-      <p class="contacttext">As the saying goes...... “You can have data without information, but you cannot have information without data.” — Daniel Keys Moran</p>
-      <a class="btn" href="mailto:aruncjohn@gmail.com">CONTACT ME</a>
-    </div>
-    <div class="Bottom">
-      <a class="footer-link" href="https://www.linkedin.com/in/aruncjds">LinkedIn</a>
-      <a class="footer-link" href="https://twitter.com/John3Arun">Twitter</a>
-      <a class="footer-link" href="https://neptune.ai/blog/deploying-computer-vision-models">Github</a>
-      <p class='copyright'>© Arun C John</p>
-    </div>
-
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
+
+
+
